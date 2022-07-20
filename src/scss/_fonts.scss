@@ -1,0 +1,28 @@
+@import 'vars';
+
+@mixin font($fname, $fmark, $fweight, $fstyle) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+		src: url('../fonts/' + $fname + '/' + $fname + '-' + $fmark + '/' + $fname + '-' + $fmark + '.woff2') format('woff2'),
+				 url('../fonts/' + $fname + '/' + $fname + '-' + $fmark + '/' + $fname + '-' + $fmark + '.woff') format('woff');
+	}
+}
+
+@include font($mainFont, 'Regular', normal, normal);
+@include font($mainFont, 'Bold', Bold, normal);
+@include font($mainFont, 'Light', 300, normal);
+@include font($mainFont, 'Medium', 500, normal);
+//@include font($mainFont, 'Black', 900, normal);
+//@include font($mainFont, 'Thin', 100, normal);
+//@include font($mainFont, 'Italic', normal, italic);
+
+//@include font($secondFont, 'Regular', normal, normal);
+//@include font($secondFont, 'Bold', Bold, normal);
+//@include font($secondFont, 'Light', 300, normal);
+//@include font($secondFont, 'Medium', 500, normal);
+//@include font($secondFont, 'Black', 900, normal);
+//@include font($secondFont, 'Thin', 100, normal);
+//@include font($secondFont, 'Italic', normal, italic);

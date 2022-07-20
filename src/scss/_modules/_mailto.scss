@@ -1,0 +1,11 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.mailto{
+  color: #333;
+  font-size: 18px;
+	font-family: $mainFont, sans-serif;
+	font-weight: 500;
+  text-decoration: none;
+}

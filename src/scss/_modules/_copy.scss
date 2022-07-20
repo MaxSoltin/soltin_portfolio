@@ -1,0 +1,12 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.copy{
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	font-family: $mainFont, sans-serif;
+	font-weight: 300;
+	color: #bababa;
+}

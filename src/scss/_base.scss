@@ -1,0 +1,156 @@
+@import 'vars';
+@import '_mixins/mixins';
+@import 'extensions';
+//@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+
+//Сбросы
+
+@import 'node_modules/normalize.css/normalize';
+
+//@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+
+//Гриды
+
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+//Foundation
+
+//База
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus {
+	box-shadow: 0 0 0 2px rgba(255, 123, 0, 0.5);
+	outline: none;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	:focus {
+		box-shadow: none;
+	}
+}
+
+:active {
+	-webkit-tap-highlight-color: transparent;
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: $textcolor;
+}
+
+html {
+	font-size: 10px;
+	background-color: $bodybackground;
+}
+
+body {
+	font-family: $mainFont;
+	font-size: $fontsize;
+	font-weight: normal;
+	min-width: 320px;
+	position: relative;
+	line-height: 1;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	background-color: $bodybackground;
+	color: $textcolor;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+a {
+	color: $accent;
+	text-decoration: none;
+	transition: all 0.2s;
+	&:hover {
+		text-decoration: none;
+		color: $accent;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 3rem 0;
+	padding: 0;
+}
+
+textarea {
+	resize: vertical;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+img {
+	max-width: 100%;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

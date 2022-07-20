@@ -1,0 +1,23 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.btn {
+	@extend %btn-res;
+	background-color: #333;
+	padding: 14px 50px;
+	color: #fbfbfb;
+	font-size: 16px;
+	line-height: 1;
+	font-family: $mainFont, sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	box-shadow: $shadow-1;
+	transition: all 0.2s;
+	&:hover {
+		box-shadow: $shadow-4;
+	}
+	&:active {
+		box-shadow: $shadow-1;
+	}
+}

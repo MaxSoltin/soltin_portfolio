@@ -1,0 +1,18 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.logo {
+	font-family: $secondFont, sans-serif;
+	font-weight: bold;
+	line-height: 1;
+	font-size: 96px;
+	position: relative;
+	top: -23px;
+	transform: scale(1.05);
+	@include media-sm {
+		font-size: 36px;
+		top: auto;
+		transform: scale(1);
+	}
+}

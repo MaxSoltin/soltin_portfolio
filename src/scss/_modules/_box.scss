@@ -1,0 +1,12 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.box {
+	width: 100%;
+	display: flex;
+	&-center {
+		align-items: center;
+		justify-content: center;
+	}
+}

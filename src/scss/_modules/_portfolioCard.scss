@@ -1,0 +1,138 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.portfolioCard {
+	height: 340px;
+	display: flex;
+	align-items: stretch;
+	padding-bottom: 30px;
+	@include media-lg {
+		height: 310px;
+	}
+	@include media-md {
+		height: 100%;
+	}
+	@include media-sm {
+		height: 300px;
+	}
+	@include media-xs {
+		height: auto;
+	}
+	&__wrapper{
+		width: 100%;
+		background-color: #fbfbfb;
+		color: #333;
+		box-shadow: $shadow-1;
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		&:hover {
+			color: #333;
+			box-shadow: $shadow-4;
+			img {
+				transform: translateY(-100%);
+			}
+		}
+		&:active {
+			box-shadow: $shadow-1;
+		}
+		@include media-md {
+			flex-direction: column;
+		}
+		@include media-sm {
+			flex-direction: row;
+		}
+		@include media-xs {
+			flex-direction: column;
+		}
+	}
+	&__img {
+		width: 270px;
+		height: 100%;
+		overflow: hidden;
+		flex: 0 0 270px;
+		border-right: 1px solid #e5e5e5;
+		position: relative;
+		@include media-lg {
+			flex: 0 0 210px;
+		}
+		@include media-md {
+			flex: 0 0 150px;
+			width: 100%;
+			border-right: none;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		@include media-sm {
+			flex: 0 0 220px;
+			width: 270px;
+			border-right: 1px solid #e5e5e5;
+			border-bottom: none;
+		}
+		@include media-xs {
+			flex: 0 0 150px;
+			width: 100%;
+			border-right: none;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		img {
+			width: 100%;
+			object-fit: cover;
+			object-position: top center;
+			transition: all 2s ease-in-out;
+			position: absolute;
+			top: 310px;
+			transform: translateY(-310px);
+			@include media-lg {
+				top: 280px;
+				transform: translateY(-280px);
+			}
+			@include media-md {
+				transition: all 4s ease-in-out;
+				top: 150px;
+				transform: translateY(-150px);
+			}
+			@include media-sm {
+				top: 270px;
+				transform: translateY(-270px);
+			}
+			@include media-xs {
+				transition: all 4s ease-in-out;
+				top: 150px;
+				transform: translateY(-150px);
+			}
+		}
+	}
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20px;
+		font-size: 16px;
+		font-family: $mainFont, sans-serif;
+		font-weight: 300;
+		line-height: 24px;
+		flex: 1 1 auto;
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-family: $mainFont, sans-serif;
+		font-weight: bold;
+	}
+	&__link {
+		text-decoration: underline;
+	}
+	&__text {
+		margin-bottom: 20px;
+	}
+	&__action {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include media-md {
+			margin-top: 30px;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+
+.footer{
+  flex: 0 1 auto;
+	padding: 30px 0;
+}

@@ -1,0 +1,24 @@
+@import '../vars';
+@import '../_mixins/mixins';
+@import '../extensions';
+  
+h1{
+  color: red;
+}
+  
+.nav{
+  @include media((
+    height: (lg: 800px, md: 600px, sm: 300px),
+    border: (sm: 1px solid red)
+  ));
+  &_list{
+   display: inline-block; 
+   @include media((
+     display: (sm: block, md: flex, lg: none),
+     color: (sm: green)
+   ));
+  }
+}
+//state
+
+//theme
